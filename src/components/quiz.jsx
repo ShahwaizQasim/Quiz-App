@@ -60,14 +60,20 @@ function Quiz() {
             answer: 'Managing complex state logic',
         },
     ]
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [currentAnswer, setCurrentAnswer] = useState(null)
+    const handleClick = (option) => {
+         setCurrentAnswer(option)   
+    }
+    const handleNextQuestion = () => {
+   }
 
     return (
         <div className="flex flex-col h-dvh justify-center items-center">
             <QuestionList question={questions[currentQuestionIndex].question}
-                options={questions[currentQuestionIndex].option} />
+                options={questions[currentQuestionIndex].option} handleClick={handleClick} currentAnswer={curr} />
             <button className="mt-10 border-2 border-black py-2 px-6 text-sm hover:scale-95
-             text-black font-semibold active:bg-black active:text-white">Next Question</button>
+             text-black font-semibold active:bg-black active:text-white" onClick={handleNextQuestion}>Next Question</button>
         </div>
     )
 }
