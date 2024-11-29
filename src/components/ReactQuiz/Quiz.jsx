@@ -88,7 +88,7 @@ function Quiz() {
                         options={questions[currentQuestionIndex].option} handleClick={handleClick} currentAnswer={currentAnswer} />
                     <button disabled={currentAnswer == null}
                         className={`${currentAnswer === null ?
-                            `cursor-not-allowed mt-8 px-6 py-2 rounded-[10px] border-2 m-auto` : 'm-auto mt-10 border-2 cursor-pointer border-black py-2 px-6 text-sm rounded-[10px] hover:scale-95 font-semibold active:bg-black active:text-white text-black'}' 
+                            `cursor-not-allowed mt-8 px-6 py-2 rounded-[10px] border-2` : ' mt-10 border-2 cursor-pointer border-black py-2 px-6 text-sm rounded-[10px] hover:scale-95 font-semibold active:bg-black active:text-white text-black'}' 
                `} onClick={handleNextQuestion}>Next Question</button>
                 </div> : <Score score={score} />
             }
