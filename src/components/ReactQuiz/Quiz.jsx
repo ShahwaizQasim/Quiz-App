@@ -64,7 +64,7 @@ function Quiz() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [currentAnswer, setCurrentAnswer] = useState(null)
     const [score, setScore] = useState(0);
-    console.log("score=>", score);
+    // console.log("score=>", score);
 
 
     const handleClick = (option) => {
