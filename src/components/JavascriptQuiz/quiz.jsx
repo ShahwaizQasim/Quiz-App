@@ -8,7 +8,6 @@ function JavaScriptQuiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentAnswer, setCurrentAnswer] = useState(null)
   const [score, setScore] = useState(0);
-console.log('score=>', score);
 
   const handleClick = (option) => {
     setCurrentAnswer(option)
@@ -30,7 +29,7 @@ console.log('score=>', score);
           quizOptions={quizQuestion[currentQuestionIndex].options} handleClick={handleClick} currentAnswer={currentAnswer} />
           <button className={`${currentAnswer === null ? 'cursor-not-allowed mt-8' :
             'mt-10 border-2 cursor-pointer border-black py-2 px-6 text-sm rounded-[10px] hover:scale-95 font-semibold active:bg-black active:text-white text-black'} 
-  `} onClick={handleNextQuestion}>Next Question</button></div> : <JavascriptScore score={score}/>
+  `} onClick={handleNextQuestion}>Next Question</button></div> : <JavascriptScore score={score} />
 
       }
     </div>
